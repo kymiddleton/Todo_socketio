@@ -1,0 +1,132 @@
+body {
+    height: 100vh;
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+}
+
+.one {
+    width: 100%;
+    height: 100px;
+    text-align: left;
+    background-image: linear-gradient(to right, #dd0495 14%,#aa06e5 83%);
+    margin-bottom: 40px;
+}
+
+h1 {
+    font-size: 40px;
+    font-weight: 100;
+    color: white;
+    padding-top: 30px;
+    padding-left: 18px;
+}
+
+.wrap {
+    width: 700px;
+    height: 900px;
+    margin-left: auto;
+    margin-right: auto;
+    border: 2px solid transparent;
+    border-radius: 8px;
+    background-image: linear-gradient(white, white), radial-gradient(circle at top left, #b60773, purple);
+    background-origin: border-box;
+    background-clip: content-box, border-box;
+}
+
+form {
+    display: block;
+    text-align: left;
+    padding-left: 30px;
+} 
+
+input {
+    display: grid;
+    border-radius: 20px;
+    border-color: #dd0495;
+    border-width: 1px;
+    background-color: #f0f0f0;
+    width: 550px;
+    height: 25px;
+    font-size: 18px;
+    margin-top: 20px;
+    margin-left: 40px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+}
+
+#submit {
+    display: grid;
+    align-items: right;
+    color: navy;
+    background-color: transparent;
+    border: none;
+    font-size: 25px;
+    padding: 0;
+    cursor: pointer;
+    width: 0px;
+}
+
+#todos {
+    margin-left: 35px;
+    display: grid;
+    grid-template-rows: auto;
+    grid-gap: 20px;
+    color: black;
+}
+
+li {
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr 550px 1fr;
+    grid-gap: 20px;
+    padding: 10px;
+    color: black;
+    text-align: left;
+    background-color:#f0f0f0; 
+    border-radius: 10px;
+    margin-bottom: 10px;
+    margin-right: 15px;
+    margin-left: 15px;
+}
+
+.fa-times {
+    color: navy;
+    font-size:25px;
+}
+
+.fa-square {
+    color: navy;
+    margin-left: 10px;
+    font-size: 25px;
+}
+
+.item {
+    position: relative;
+    padding: 20px;
+}
+
+.fa-share {
+    position: absolute;
+    margin-left: 600px;
+    top: -66px;
+    /* left: 670px; */
+    font-size: 25px;
+    color: navy;
+}
+
+.fa-check-square {
+    color: navy;
+    margin-left: 10px;
+    font-size: 25px;
+}
+
+@media only screen and (max-width: 600px) {
+    
+    .wrap {
+        border: none;
+    }
+    
+    .one {
+        width: 700px;
+    }
+
+}
