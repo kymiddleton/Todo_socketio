@@ -3,9 +3,17 @@ $(function () {
         toDoList: [],
     };
 
-    $('#submit').on('click', function (event) {
+    $('#submit').keypress(function (event) {
         event.preventDefault();
         console.log('Submit works');
+        const keycode = (event.keycode ? event.keycode : event.which);
+        if (keycode === '13'){
+            alert ('The "enter" key was pressed');
+        }
+
+    // $('#submit').on('click', function (event) {
+        // event.preventDefault();
+        // console.log('Submit works');
 
         const newTodo = {
             todoItem: $('#todo-input').val().trim(),
@@ -32,14 +40,14 @@ function populateList(data) {
         const listTag = $('<li>');
         const textDiv = $('<div>');
         if (e.todoStatus == true) {
-            checkbox = $('<i class="far fa-check-square">');
+            checkbox = $('<i class="far fa-times-circle">');
         } else {
-            checkbox = $('<i class="far fa-square unchecked complete">');
+            checkbox = $('<i class="far fa-circle complete">');
         }
 
         checkbox.attr('data-id', e._id);
         checkbox.attr('data-status', e.todoStatus);
-        const button = $('<i class="fas fa-times">');
+        const button = $('<i class="far fa-times-circle">');
 
         listTag.append()
         listTag.append(checkbox);
@@ -62,12 +70,12 @@ function populateList(data) {
 }
 
 function toggleCheckbox(element) {
-    if ($(element).hasClass('fa-square')) {
-        $(element).removeClass('fa-square');
-        $(element).addClass('fa-check-square');
+    if ($(element).hasClass('fa-circle')) {
+        $(element).removeClass('fa-circle');
+        $(element).addClass('fa-times-circle');
     } else {
-        $(element).removeClass('fa-check-square');
-        $(element).addClass('fa-square');
+        $(element).removeClass('fa-times-circle');
+        $(element).addClass('fa-circle');
     }
 }
 

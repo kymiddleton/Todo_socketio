@@ -5,43 +5,43 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="stylesheet" href="styles/Reset.css" />
+  <link rel="stylesheet" href="styles/reset.css" />
   <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
     crossorigin="anonymous">
   <link rel="stylesheet" href="styles/style.css">
 
-  <script src="https://code.jquery.com/jquery.js"></script>
-
-  <title>ToDo List</title>
+  <title>Todo</title>
 </head>
 
 <body>
 
   <div class="container">
-    <div class="box one">
-      <h1>Kyla's To Do List</h1>
-    </div>
+    <div class="box one"></div>
 
     <div class="box two" id="addItems">
       <div class="wrap">
-        <!-- <div class="center"> -->
-          <form>
-            <input id="todo-input" type="text" name="todo" class="border" placeholder="Add New Task.." /> <br>
-            <!-- <button id="submit" class="add todo submit"><i class="fas fa-share"></i></button> -->
-            <div id="submit" class="item"><i class="fa fa-share"></i></div>
-          </form>
-        <!-- </div> -->
-        <div id="todos" class="content"></div>
-        
-        <div class="card-body">
+        <form>
+          <div class="header"></div>
+          <input id="todo-input" type="text" name="todo" class="border" placeholder="Add New Task.." /> <br>
+
+          <div id="submit" class="item"></div>
+        </form>
+
+        <div id="todos">
           <ul id="addTasks" class="list-group"></ul>
         </div>
+
       </div>
     </div>
   </div>
 
+  <i class="far fa-circle"></i>
+  <i class="far fa-times-circle"></i>
+
+  <script src="https://code.jquery.com/jquery.js"></script>
   <script src="/js/addtasks.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.js"></script>
 </body>
+
 </html>
