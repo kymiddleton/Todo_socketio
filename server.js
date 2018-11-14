@@ -3,6 +3,9 @@ const express = require('express');
 const path = require('path');
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
+// const moment = require('moment');
+// const server = require('http').createServer(app);
+// const io = require('socket.io')(server);
 
 // Initialize Express
 const app = express();
@@ -23,6 +26,9 @@ app.use(express.static(path.join(__dirname, 'public')));
 // Routes
 require('./routes/api-routes.js')(app);
 require('./routes/html-routes.js')(app);
+
+// Socket.io
+// require('./sockets/sockets')(app);
   
 //Set up promises with mongoose
 mongoose.Promise = global.Promise;
@@ -34,6 +40,7 @@ mongoose.connect(
     useMongoClient: true
   }
 );
+// mongoose.set('useFindAndModify', false);
 
 // Starts our server on the predefined PORT
 app.listen(PORT, function(){

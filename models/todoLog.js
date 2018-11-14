@@ -11,7 +11,15 @@ const TodoSchema = new Schema({
     },
     todoStatus: {
         type: Boolean
-    }
+    },
+    // userCreate: {
+    //     type: String,
+    //     trim: true
+    // },
+    // userComplete: {
+    //     type: String,
+    //     trim: true
+    // }
 });
     // This creates our model from the above schema, using Mongoose's model method
     const todo = mongoose.model("todoLog", TodoSchema);

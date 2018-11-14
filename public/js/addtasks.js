@@ -3,17 +3,18 @@ $(function () {
         toDoList: [],
     };
 
-    $('#submit').keypress(function (event) {
+    // $('#submit').keypress(function (event) {
+    //     event.preventDefault();
+    //     console.log('Submit works');
+    //     const keycode = (event.keycode ? event.keycode : event.which);
+    //     if (keycode === '13'){
+    //         alert ('The "enter" key was pressed');
+    //     }
+
+    $('#submit').on('click', function (event) {
+    // $('#submit').on("keyup", function (event) {
         event.preventDefault();
         console.log('Submit works');
-        const keycode = (event.keycode ? event.keycode : event.which);
-        if (keycode === '13'){
-            alert ('The "enter" key was pressed');
-        }
-
-    // $('#submit').on('click', function (event) {
-        // event.preventDefault();
-        // console.log('Submit works');
 
         const newTodo = {
             todoItem: $('#todo-input').val().trim(),
