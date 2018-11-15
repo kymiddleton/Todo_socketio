@@ -1,19 +1,19 @@
 // $('.day').moment().format('dddd');
 
-const moment = require('moment');
+// const moment = require('moment');
 
-const date = moment();
-const day = moment().format('ddd');
-const month = moment().format('MMM Do');
-const year = moment().format('YYYY');
+// const date = moment();
+// const day = moment().format('ddd');
+// const month = moment().format('MMM Do');
+// const year = moment().format('YYYY');
 
-const dayEl = $('<span>').addClass('day').text(day)
+// const dayEl = $('<span>').addClass('day').text(day)
 
-const monthEl = $('<div>').addClass('month').text(month)
-const yearEl = $('<div>').addClass('year').text(year)
-const dateEl = $('<div>').append(monthEl, yearEl)
+// const monthEl = $('<div>').addClass('month').text(month)
+// const yearEl = $('<div>').addClass('year').text(year)
+// const dateEl = $('<div>').append(monthEl, yearEl)
 
-$('.date').append(dayEl, dateEl);
+// $('.date').append(dayEl, dateEl);
 
 
 

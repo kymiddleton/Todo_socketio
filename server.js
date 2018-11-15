@@ -4,12 +4,15 @@ const path = require('path');
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
 // const moment = require('moment');
-// const server = require('http').createServer(app);
-// const io = require('socket.io')(server);
+
+
 
 // Initialize Express
 const app = express();
 
+const server = require('http').createServer(app);
+
+const io = require('socket.io')(server);
 // Sets the port for the server to listen on
 const PORT = process.env.PORT || 3000;
 
@@ -28,7 +31,7 @@ require('./routes/api-routes.js')(app);
 require('./routes/html-routes.js')(app);
 
 // Socket.io
-// require('./sockets/sockets')(app);
+require('./sockets/todo-sockets')(io);
   
 //Set up promises with mongoose
 mongoose.Promise = global.Promise;

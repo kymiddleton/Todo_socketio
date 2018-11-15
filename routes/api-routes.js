@@ -1,9 +1,9 @@
 const ResfulAPI = require('./RestClass');
 
-// Require all models
+// // Require all models
 const db = require('../models');
 
-// ROUTING
+// // ROUTING
 module.exports = function (app) {
 
     const todo = new ResfulAPI('todo', app, db.todos);
@@ -21,7 +21,7 @@ module.exports = function (app) {
 // ROUTING
 // module.exports = function (app) {
 
-    // GET request: Route for retrieving all items from the database.
+    //GET request: Route for retrieving all items from the database.
     // app.get('/api/todo_list', function (req, res) {
     //     db.todo.find({})
     //         .then(function (dbtodo) {

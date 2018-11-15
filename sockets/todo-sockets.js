@@ -3,15 +3,14 @@ const users = {}
 module.exports = function (io) {
     console.log('running');
     io.on('connection', function (socket) {
-
+        console.log("connected");
         //Socket Routes
         socket.on('new-todo', function(data){
-            console.log(data);
-            const socket1 = users[data.name];
-            const socket2 = users[data.name2];
+            console.log(data, "------ in new todo");
+            
 
-            socket1.emit('emit-todo', data);
-            socket2.emit('emit-todo', data);
+            //io.emit('emit-todo', data);
+            
         })
         
         socket.on('new-user', function (data) {
