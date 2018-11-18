@@ -104,11 +104,14 @@ li {
     margin-right: 15px;
     margin-left: 15px;
 }
-
-.fa-times {
+/* x for for delete */
+/* .fa-times {
     color: navy;
     font-size:25px;
-}
+} */
+
+/* far fa-times-circle / circle with x for completed */
+/* far fa-circle / empty circle not complete */
 
 .fa-circle {
     color: rgb(34, 197, 197);
@@ -123,7 +126,7 @@ li {
     color: rgb(34, 197, 197);
     margin-left: 10px;
     /* margin-left: 600px; */
-    text-decoration-color: rgb(188, 186, 186);
+    /* text-decoration-color: rgb(188, 186, 186); */
     font-size: 25px;
     font-weight: 500;
 }
@@ -142,11 +145,11 @@ li {
     color: navy;
 }
 
-.fa-check-square {
+/* .fa-check-square {
     color: navy;
     margin-left: 10px;
     font-size: 25px;
-}
+} */
 
 @media only screen and (max-width: 600px) {
     

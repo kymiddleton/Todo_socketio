@@ -53,23 +53,3 @@ class RestfulAPI {
 }
 
 module.exports = RestfulAPI;
-
-
-//     find(identifier) {//       
-//      this.app.get(`/api/${this.resource}/:${identifier}`, (req, res) => {
-//         this.model.findAll({
-//           where: {
-//             [identifier]: req.params[identifier]
-//           }
-//         })
-//         .then(function(data) {
-//           res.json(data);
-//         })
-//         .catch(function(err){
-//           res.json(err);
-//         })
-//       })
-//     }
-//   }
-
-//   module.exports = RestfulAPI;

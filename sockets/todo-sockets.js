@@ -8,9 +8,7 @@ module.exports = function (io) {
         socket.on('new-todo', function(data){
             console.log(data, "------ in new todo");
             
-
-            //io.emit('emit-todo', data);
-            
+            io.emit('emit-todo', data);
         })
         
         socket.on('new-user', function (data) {

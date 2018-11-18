@@ -3,9 +3,6 @@ const express = require('express');
 const path = require('path');
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
-// const moment = require('moment');
-
-
 
 // Initialize Express
 const app = express();
@@ -46,6 +43,6 @@ mongoose.connect(
 // mongoose.set('useFindAndModify', false);
 
 // Starts our server on the predefined PORT
-app.listen(PORT, function(){
+server.listen(PORT, function(){
     console.log(`App is now listening on PORT ${PORT}`)
   })
