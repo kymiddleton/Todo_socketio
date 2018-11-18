@@ -40,12 +40,13 @@ class RestfulAPI {
     }
 
     update(identifier) {
-        this.app.put(`/api/${this.resource}/:${identifier}`, (req, res) => {
+        this.app.post(`/api/${this.resource}/:${identifier}`, (req, res) => {
             this.model.findOneAndUpdate({ [identifier]: req.body[identifier] }, { completed: req.body.completed }, { new: true })
                 .then(function (dbTodo) {
                     res.json(dbTodo);
                 })
                 .catch(function (err) {
+                    console.log(err); 
                     res.json(err);
                 });
         });
