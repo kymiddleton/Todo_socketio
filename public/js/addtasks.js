@@ -36,8 +36,6 @@ socket.on('emit-todo', function (data) {
     populateList(data);
 });
 
-//far fa-times-circle / circle with x for completed
-//far fa-circle / empty circle not complete
 function populateList(data) {
     // event.preventDefault();
     // $('#addTasks').empty();
@@ -63,7 +61,7 @@ function populateList(data) {
 
     $('#addTasks').append(listTag);
 };
-addDeleteListener();
+// addDeleteListener();
 
 function toggleCheckbox(element) {
     console.log('icon toggle function working');
@@ -82,10 +80,6 @@ function addUpdateListener(element) {
             status = true;
         } else {
             status = false;
-            
-
-            // in the new model, if it's checked you need to call the DELETE function, 
-            // not switch the state to false
         }
 
         const updateTask =
@@ -93,7 +87,6 @@ function addUpdateListener(element) {
             id: id,
             todoStatus: status
         }
-        console.log(updateTask, "This is the task that we are updating")
 
         $.post(`/api/todo/${id}`, updateTask)
         .then(function (data) {
@@ -129,21 +122,13 @@ function getAllItems() {
             button.attr('data-status', e.todoStatus);
 
             listTag.append();
-            // Moved this section from below----
             listTag.append(textDiv);
 
             textDiv.addClass('textDiv');
             textDiv.text(e.todoItem);
-            //----- to here
 
             listTag.append(button);
             addUpdateListener(button);
-
-            // Moved the next few lines above
-            // listTag.append(textDiv);
-
-            // textDiv.addClass('textDiv');
-            // textDiv.text(e.todoItem);
 
             button.addClass('delete');
             // button.attr('data-id', e._id);
@@ -158,20 +143,24 @@ getAllItems();
 
 function addDeleteListener() {
     $(".delete").on('click', function () {
+        console.log('in delete listener');
         const deleteThisId = {
-            id: $(this).attr('data-id')
+            
+            id: $(this).attr('data-id'),
+            status: $(this).attr('data-status')
         }
-     
-        $.ajax({
-            url: `/api/todo/${deleteThisId.id}`,
-            method: "delete"
-
-        }).then(function(data){
-            socket.emit('delete-todo', data);
-        });
-       
+        
+        if (deleteThisId.status === "true") {
+            $.ajax({
+                url: `/api/todo/${deleteThisId.id}`,
+                method: "delete"
+    
+            }).then(function(data){
+                socket.emit('delete-todo', data);
+            });
+            
+        } else {
+            status = false;
+        }
     });
 };
-socket.on('emit-new', function(data) {
-    getAllItems();
-})
