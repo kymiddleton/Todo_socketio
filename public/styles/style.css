@@ -7,11 +7,13 @@ body {
 
 #header {
     display: grid;
-    grid-template-rows: 2fr;
-    grid-template-columns: 1fr 550px 1fr;
-    /* grid-template-columns: 1fr 550px; */
-    grid-gap: 20px;
-    padding: 15px;
+    /* grid-template-rows: repeat(3, 1fr); */
+    /* grid-template-columns: repeat(3, 1fr); */
+    /* grid-template-rows: 1fr;
+    grid-template-columns: 1fr 320px 1fr; */
+    grid-template-columns: 1fr 455px;
+    grid-gap: 5px;
+    padding: 10px;
     color: darkslategrey;
     text-align: left;
     margin-bottom: 10px;
@@ -24,7 +26,7 @@ h1 {
     /* font-weight: 100; */
     color: darkslategrey;
     /* padding-top: 30px; */
-    padding-left: 35px;
+    padding-left: 10px;
 }
 
 h2 {
@@ -95,7 +97,8 @@ li {
     display: grid;
     grid-template-rows: 1fr;
     /* grid-template-columns: 1fr 550px 1fr; */
-    grid-template-columns: 1fr 550px;
+    /* grid-template-columns: 1fr 550px; */
+    grid-template-columns: 490px 1fr;
     grid-gap: 20px;
     padding: 15px;
     color: darkslategrey;

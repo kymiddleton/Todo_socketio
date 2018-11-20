@@ -8,8 +8,8 @@ const mongoose = require('mongoose');
 const app = express();
 
 const server = require('http').createServer(app);
-
 const io = require('socket.io')(server);
+
 // Sets the port for the server to listen on
 const PORT = process.env.PORT || 3000;
 
@@ -27,7 +27,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 require('./routes/api-routes.js')(app);
 require('./routes/html-routes.js')(app);
 
-// Socket.io
+// Socket.io Routes
 require('./sockets/todo-sockets')(io);
   
 //Set up promises with mongoose
@@ -40,7 +40,6 @@ mongoose.connect(
     useMongoClient: true
   }
 );
-// mongoose.set('useFindAndModify', false);
 
 // Starts our server on the predefined PORT
 server.listen(PORT, function(){

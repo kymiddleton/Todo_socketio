@@ -9,16 +9,18 @@ module.exports = function (app) {
     const todo = new ResfulAPI('todo', app, db.todo);
     todo.find();
     todo.create();
-    todo.delete('id');
-    todo.update('_id');
+    todo.delete();
+    // todo.delete('id');
+    todo.update();
+    // todo.update('_id');
 };
 
 
 
-// LOAD DATA: Linking our routes to a series of "data" sources
-// const taskList = require('../data/todo_list');
+//LOAD DATA: Linking our routes to a series of "data" sources
+//const taskList = require('../data/todo_list');
 
-// ROUTING
+//ROUTING
 // module.exports = function (app) {
 
     //GET request: Route for retrieving all items from the database.
@@ -32,7 +34,7 @@ module.exports = function (app) {
     //         });
     // });
 
-    // POST request: Route for saving a new Inventory entry to the database.
+    //POST request: Route for saving a new Inventory entry to the database.
     // app.post('/api/todo_list', function (req, res) {
     //     console.log('------Adding to todo in mongo');
     //     db.todo.create(req.body)
@@ -44,7 +46,7 @@ module.exports = function (app) {
     //         });
     // });
 
-    // Route for saving updates 
+    //Route for saving updates 
     // app.post('/api/update/todo_list', function (req, res) {
     //     console.log('----> updating <----');
     //     // Find an entry by ID 
@@ -57,17 +59,17 @@ module.exports = function (app) {
     //         });
     // });
 
-    // app.post('/api/delete/todo_list', function (req, res) {
-    //     console.log('--------deleting--------');
-    //     db.todo.findByIdAndRemove(req.body.id, function (err, todo) {
-    //         if (err) return res.status(500).send(err);
-    //         // We'll create a simple object to send back with a message and the id of the document that was removed
-    //         // You can really do this however you want, though.
-    //         const response = {
-    //             message: "Todo successfully deleted",
-    //             id: todo._id
-    //         };
-    //         return res.status(200).send(response);
-    //     });
-    // });
+//     app.post('/api/delete/todo_list', function (req, res) {
+//         console.log('--------deleting--------');
+//         db.todo.findByIdAndRemove(req.body.id, function (err, todo) {
+//             if (err) return res.status(500).send(err);
+//             // We'll create a simple object to send back with a message and the id of the document that was removed
+//             // You can really do this however you want, though.
+//             const response = {
+//                 message: "Todo successfully deleted",
+//                 id: todo._id
+//             };
+//             return res.status(200).send(response);
+//         });
+//     });
 // };
