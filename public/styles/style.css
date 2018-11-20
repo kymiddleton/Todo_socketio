@@ -7,10 +7,6 @@ body {
 
 #header {
     display: grid;
-    /* grid-template-rows: repeat(3, 1fr); */
-    /* grid-template-columns: repeat(3, 1fr); */
-    /* grid-template-rows: 1fr;
-    grid-template-columns: 1fr 320px 1fr; */
     grid-template-columns: 1fr 455px;
     grid-gap: 5px;
     padding: 10px;
@@ -23,19 +19,20 @@ body {
 
 h1 {
     font-size: 75px;
-    /* font-weight: 100; */
     color: darkslategrey;
-    /* padding-top: 30px; */
     padding-left: 10px;
 }
 
 h2 {
     font-size: 75px;
-    /* font-weight: 100; */
     color: darkslategrey;
-    /* padding-top: 30px; */
     padding-left: 35px;
 }
+
+p {
+    margin-top: 10px;
+}
+
 .two {
     margin-top: 80px;
 }
@@ -96,8 +93,6 @@ input {
 li {
     display: grid;
     grid-template-rows: 1fr;
-    /* grid-template-columns: 1fr 550px 1fr; */
-    /* grid-template-columns: 1fr 550px; */
     grid-template-columns: 490px 1fr;
     grid-gap: 20px;
     padding: 15px;
@@ -107,19 +102,10 @@ li {
     margin-right: 15px;
     margin-left: 15px;
 }
-/* x for for delete */
-/* .fa-times {
-    color: navy;
-    font-size:25px;
-} */
-
-/* far fa-times-circle / circle with x for completed */
-/* far fa-circle / empty circle not complete */
 
 .fa-circle {
     color: rgb(34, 197, 197);
     margin-left: 10px;
-    /* margin-left: 600px; */
     color: slategrey;
     font-size: 25px;
     font-weight: 500;
@@ -128,8 +114,6 @@ li {
 .fa-times-circle {
     color: rgb(34, 197, 197);
     margin-left: 10px;
-    /* margin-left: 600px; */
-    /* text-decoration-color: rgb(188, 186, 186); */
     font-size: 25px;
     font-weight: 500;
 }
@@ -143,16 +127,10 @@ li {
     position: absolute;
     margin-left: 600px;
     top: -66px;
-    /* left: 670px; */
     font-size: 25px;
     color: navy;
 }
 
-/* .fa-check-square {
-    color: navy;
-    margin-left: 10px;
-    font-size: 25px;
-} */
 
 @media only screen and (max-width: 600px) {
     
